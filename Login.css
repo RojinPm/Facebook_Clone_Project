@@ -1,0 +1,260 @@
+*{
+
+    margin: 0;
+    padding: 0;
+}
+body{
+   
+background: #f0f2f5;
+  
+}
+#container{
+
+display: flex;
+align-items: center;
+height: 100vh;
+justify-content:space-evenly;
+
+}
+
+.firstpart{
+
+  height: 350px;
+  padding: 10px 40px;
+   color: #1c1e21;
+   direction: ltr;
+   line-height: 1.34;
+   margin: 0;
+   padding: 0;
+   border-radius: 5px;
+
+}
+.firstpart p{
+
+   font-size: 24px;
+   /* line-height: 28px; */
+   width: auto;
+   max-width: 450px;
+   margin-left: 10px;
+   line-height: 1.3em;
+  font-family: sans-serif;
+   margin-left: 20px;
+  padding: 5px 10px;
+  margin-top: -15px;
+
+}
+img{
+width: 70%;
+
+}
+.secondpart{
+
+   align-items: center;
+   background-color: rgb(255, 255, 255);
+   border: none;
+   border-radius: 8px;
+   /* box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%); */
+   box-sizing: border-box;
+   margin: 40px 0 0;
+   padding: 20px 0 28px;
+   width: 396px;
+   box-shadow: 2px 4px 40px rgb(5 5 255 / 20%);
+   
+
+}
+.secondpart:hover{
+
+
+
+
+
+
+}
+.input-first,.input-second{
+
+   padding:12px 20px;
+
+}
+.inputext{
+
+   font-size: 17px;
+   padding: 14px 16px;
+   width: 330px;
+   border-radius: 5px;
+   border: 0.001px solid rgb(228, 220, 220);
+
+}
+.inputext:focus{
+
+   outline: 2px solid #0400ff;
+   border-radius: 5px;
+
+}
+#Loging_link{
+
+   background-color: #1877f2;
+   border: none;
+   border-radius: 6px;
+   font-size: 20px;
+   line-height: 48px;
+   padding: 8px 140px;
+   margin: 4px 25px;
+   width: 70%;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+
+}
+#link{
+
+   color: #1877f2;
+   font-size: 16px;
+   font-weight: 500;
+  padding: 15px 20px;
+  margin: 15px 110px;
+   font-weight: 520;
+   position: relative;
+    bottom: 10px;
+
+
+
+}
+.link-part{
+
+margin-top: 20px;
+
+}
+hr{
+
+   margin: 20px 20px;
+   margin-top: 28px;
+
+}
+.new_btn{
+
+   background-color: #42b72a;
+   color: #fff;
+   cursor: pointer;
+   display: inline-block;
+   text-decoration: none;
+   white-space: nowrap;
+   border: none;
+   border-radius: 6px;
+   font-size: 17px;
+   line-height: 48px;
+   padding: 0 19px;
+   margin: 10px 90px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+.registration_link{
+
+    background-color: #42b72a;
+    color: #fff;
+    margin: 4px 90px;
+    padding: 6px 30px;
+    margin-top: 70px;
+    position: relative;
+    top: 13px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+
+
+@media (max-width:800px) {
+
+   .firstpart{
+
+     
+      padding: 10px 40px;
+       color: #1c1e21;
+       direction: ltr;
+       line-height: 1.34;
+       margin: 0;
+       padding: 0;
+       border-radius: 5px;
+   
+   }
+   #container{
+     
+        flex-direction: column;
+
+   }
+
+    .firstpart p{
+    
+        font-size: 18px;
+        line-height: 28px;
+        width: auto;
+        max-width: 350px;
+         margin: 0 auto;
+        line-height: 1.2em;
+       font-family: sans-serif;
+       padding: 5px 10px;
+       margin-left: 20px;
+       
+    
+    }
+
+
+    img{
+    width: 80%;
+    
+    }
+
+    .secondpart{
+
+      
+       background-color: #fff;
+       border: none;
+       border-radius: 8px;
+       /* box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%); */
+       box-sizing: border-box;
+       padding: 2px 0 28px;
+       width: 395px;
+       box-shadow: 2px 4px 40px rgb(19 15 235 / 10%);
+       margin-top: -200px;
+   
+   }
+
+
+}
+
+#sign_in_with_google{
+
+display: flex;
+justify-content: center;
+background-color: #c0b5b525;
+box-shadow: 2px 4px 40px rgb(15 15 255 / 20%);
+width: 80%;
+margin: 0 auto;
+align-items: center;
+padding: 10px 3px;
+border-radius: 5px;
+border: 0.005px solid rgb(196, 191, 191);
+}
+#sign_in_with_google > img{
+
+
+   width: 30px;
+   height: 30px;
+
+}
+#sign_in_with_google > p{
+
+color: rgb(0, 0, 0);
+font-weight: 600;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 2px 4px;
+transition: 300ms;
+
+}
+#sign_in_with_google:hover{
+
+   background-color:  rgba(112,181,240,0.15);
+   
+
+}

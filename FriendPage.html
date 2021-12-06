@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" type="image/icon type">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
 
 
 </head>
-<body>
+<body onload="Logined_friends()">
      
     <nav>
  
@@ -129,9 +130,9 @@
                      
                   <li class="fill"> <div class="profile_with_name">
  
-                     <img src="https://media-exp1.licdn.com/dms/image/C5603AQG2AUqRhWyxkg/profile-displayphoto-shrink_100_100/0/1617724632580?e=1642636800&v=beta&t=y8n__Q_3GmI4FPHwxKpqcTBePPApUHZBhWnM5yB4J3I" alt="" srcset="">
+                     <img id="User_friendpage_img" src="https://media-exp1.licdn.com/dms/image/C5603AQG2AUqRhWyxkg/profile-displayphoto-shrink_100_100/0/1617724632580?e=1642636800&v=beta&t=y8n__Q_3GmI4FPHwxKpqcTBePPApUHZBhWnM5yB4J3I" alt="" srcset="">
      
-                     <span>Rojin</span>
+                     <span id="user_friendpage_name">Rojin</span>
                      
 
                     </div></li>
@@ -154,12 +155,12 @@
                        <div class="profile_user">
 
 
-                       <img src="https://media-exp1.licdn.com/dms/image/C5603AQG2AUqRhWyxkg/profile-displayphoto-shrink_100_100/0/1617724632580?e=1642636800&v=beta&t=y8n__Q_3GmI4FPHwxKpqcTBePPApUHZBhWnM5yB4J3I" alt="" srcset="">
+                       <img id="settings_friend_user_img" src="https://media-exp1.licdn.com/dms/image/C5603AQG2AUqRhWyxkg/profile-displayphoto-shrink_100_100/0/1617724632580?e=1642636800&v=beta&t=y8n__Q_3GmI4FPHwxKpqcTBePPApUHZBhWnM5yB4J3I" alt="" srcset="">
 
                                <div class="profile_name">
 
-                                 <p>Rojin Pm</p>
-                                 <a href="#">See your Profile</a>
+                                 <p id="user_account_friendPage_name">Rojin Pm</p>
+                                 <a href="Accountpage.html">See your Profile</a>
             
 
                                </div>
@@ -216,7 +217,7 @@
   
                                         <img src="images/logout.png" class="settings-icon">
 
-                                        <a href="#">Logout <img class="inside_icon" src="images/arrow.png" width="10px"></a>
+                                        <a href="Login.html">Logout <img class="inside_icon" src="images/arrow.png" width="10px"></a>
 
                                   </div>
 
@@ -685,7 +686,7 @@
 
          </div>
 
-         <script src="script2.js"></script>
+         <script src="FriendPage.js"></script>
 
 
          </body>

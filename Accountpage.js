@@ -30,10 +30,6 @@ const settingsMenuToggle = () =>{
 
 
 
-
-
-
-
 //cover image posting
 
 var parentDiv=document.getElementById('image_container');
@@ -117,12 +113,30 @@ function CreatepostDiv(){
 
 //Color Changing
 
-var dark_btn=document.getElementById('dark_btn');
+// var dark_btn=document.getElementById('dark_btn');
 
 
-dark_btn.onclick=function(){
+// dark_btn.onclick=function(){
 
-dark_btn.classList.toggle('dark-btn-on')
+// dark_btn.classList.toggle('dark-btn-on')
+
+
+// }
+
+function Account_user(){
+
+
+document.getElementById("user_AccountPage_img").src=localStorage.getItem("image");
+document.getElementById("user_Account_name").innerHTML=localStorage.getItem("userName");
+document.getElementById("Account_setttings_img").src=localStorage.getItem("image");
+document.getElementById("Account_settings_name").innerHTML=localStorage.getItem("userName")
+// document.getElementById("user_account_profile_img").src=localStorage.getItem("image");
+document.getElementById("user_account_profile_name").innerHTML=localStorage.getItem("userName");
+
+document.getElementById("Account_post_img").src=localStorage.getItem("image");
+document.getElementById("Account_post_name").textContent=localStorage.getItem("userName");
+document.getElementById("user_Account_write_img").src=localStorage.getItem("image")
+
 
 
 }

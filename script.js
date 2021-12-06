@@ -24,7 +24,7 @@
         var img=document.getElementById('post_image'); 
         const input_image=document.getElementById('output');
         var uploaded_image="";
-      
+        img.src=localStorage.getItem("post_image");
         
 
          input_image.addEventListener("change", function(){
@@ -36,7 +36,10 @@
                   console.log(uploaded_image)
                    img.src=uploaded_image;
                    img.setAttribute("id","post_image_container");
-                   parent_div.appendChild(img);
+                  //  parent_div.appendChild(img);
+                   localStorage.setItem("post_image",uploaded_image);
+                   parent_div.appendChild(localStorage.getItem("post_image"));
+                  
 
                })
 
@@ -78,14 +81,38 @@
 
             var settings_menu = document.querySelector(".settings-menubar");
 
-            const settingsMenuToggle = () =>{
+               const settingsMenuToggle = () =>{
 
                  settings_menu.classList.toggle("settings-menubar_height")
 
 
 
                 }
+
+                function signedUsername(){
+
            
+                    document.getElementById("logined").innerHTML=localStorage.getItem("userName");
+                  
+                     var img=document.getElementById("logined_image");
+                     var settings_img=document.getElementById("img_setting");
+                     var settings_id=document.getElementById("Email_setting").innerHTML=localStorage.getItem("userName")
+                     img.src=localStorage.getItem("image");
+                     settings_img.src=localStorage.getItem("image");
+                     document.getElementById("user_account_name").innerHTML=localStorage.getItem("EmailAddress");
+                     document.getElementById("user_account_img").src=localStorage.getItem("image");
+                     document.getElementById("post_home_user_img1").src=localStorage.getItem("image");
+                     document.getElementById("post_user_home_Name").textContent=localStorage.getItem("userName");
+                     document.getElementById("user_comment_img").src=localStorage.getItem("image");
+                     document.getElementById("post_home_user_img2").src=localStorage.getItem("image");
+                     document.getElementById("post_home_user_name2").textContent=localStorage.getItem("userName");
+
+                     
+                  
+
+                }
+
+             
              
 
 

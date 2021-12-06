@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" type="image/icon type">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+
+ <div id="container">
+
+
+    <div class="firstpart">
+
+      
+       <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg">
+      <p>Facebook helps you connect and share with the people in your life</p>
+
+    </div>
+
+   <div class="secondpart">
+
+       <div class="input-first">
+
+           <input type="text" class="inputext " name="email" id="email" placeholder="Email address or phone number">
+
+       </div>
+
+         <div class="input-second">
+
+        <input type="password"  class="inputext" name="email" id="PassWord" placeholder="Password">
+
+        </div>
+
+        <div class="input-second">
+
+          <input type="password"  class="inputext" name="email" id="User_data" placeholder="Enter the username">
+  
+          </div>
+ 
+        <a id="Loging_link" href="" onclick="check_user()" id="btn" name="login">Log In</a>
+
+         <div class="link-part">
+
+          <a id="link" href="index.html">Login with Google</a>
+
+          <a class="registration_link" href="Register.html">Create new Account</a>
+     
+         <hr>
+   
+        </div>
+
+            <!-- <a role="button" class="new_btn" href="#">Create New Account</a> -->
+            <button  id="sign_in_with_google">
+
+                  <img src="/images/google.svg">
+
+                  <p>Sign in with Google</p>
+
+
+            </button>
+
+   
+          </div>
+
+   
+     </div>
+     <script src="Login.js"></script>
+
+ 
+     <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+      import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBPDXzT4N86cyTr74Pf7xiF84p-doPkfAY",
+        authDomain: "facebook-clone-8bcc1.firebaseapp.com",
+        projectId: "facebook-clone-8bcc1",
+        storageBucket: "facebook-clone-8bcc1.appspot.com",
+        messagingSenderId: "1064299135030",
+        appId: "1:1064299135030:web:0d467606ce43bdd5d29897"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider(app);
+
+    
+       document.getElementById('sign_in_with_google').addEventListener("click", function(){
+ 
+
+           signInWithPopup(auth, provider)
+           .then((result) => {
+           // This gives you a Google Access Token. You can use it to access the Google API.
+              const credential = GoogleAuthProvider.credentialFromResult(result);
+                 const token = credential.accessToken;
+             // The signed-in user info.
+              const user = result.user;
+      
+              console.log(user.email);
+              console.log("Logined!!!!!!!!!!!!!!!!!!!!!!");
+              localStorage.setItem("EmailAddress",user.email);
+              localStorage.setItem("image",user.photoURL);
+              localStorage.setItem("userName",user.displayName);
+              console.log(localStorage.getItem("EmailAddress"));
+              console.log(localStorage.getItem("image"));
+              console.log(user.photoURL);
+              console.log(user.displayName);
+              localStorage.removeItem("Password");
+              alert("User validated Successfully!! Click on LogIn button to Log into the account!")
+  
+              //  document.getElementById("link").href="index.html";
+              // localStorage.setItem("")
+           // ...
+       }).catch((error) => {
+           // Handle Errors here.
+               const errorCode = error.code;
+               const errorMessage = error.message;
+              // The email of the user's account used.
+               const email = error.email;
+            // The AuthCredential type that was used.
+          const credential = GoogleAuthProvider.credentialFromError(error);
+
+        console.log(errorMessage);
+    // ...
+     });
+
+
+
+
+       })
+
+
+    
+
+
+
+    </script>
+
+
+</body>
+</html>

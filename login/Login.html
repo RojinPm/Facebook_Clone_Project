@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" type="image/icon type">
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+
+ <div id="container">
+
+
+    <div class="firstpart">
+
+      
+       <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg">
+      <p>Facebook helps you connect and share with the people in your life</p>
+
+    </div>
+
+   <div class="secondpart">
+
+       <div class="input-first">
+
+           <input type="text" class="inputext " name="email" id="email" placeholder="Email address or phone number">
+
+       </div>
+
+         <div class="input-second">
+
+        <input type="password"  class="inputext" name="email" id="email" placeholder="Password" autofocus="1">
+
+      </div>
+ 
+        <a href="" value="1" id="btn" name="login">Log In</a>
+
+         <div class="link-part">
+
+          <a class="link"href="">Forgotten password?</a>
+     
+         <hr style="margin-top: 160px;">
+   
+        </div>
+
+            <!-- <a role="button" class="new_btn" href="#">Create New Account</a> -->
+            <button  id="sign_in_with_google">
+
+                  <img src="/images/google.svg">
+
+                  <p>Sign in with Google</p>
+
+
+            </button>
+
+   
+          </div>
+
+   
+     </div>
+     <script src="Login.js"></script>
+
+ 
+     <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+      import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBPDXzT4N86cyTr74Pf7xiF84p-doPkfAY",
+        authDomain: "facebook-clone-8bcc1.firebaseapp.com",
+        projectId: "facebook-clone-8bcc1",
+        storageBucket: "facebook-clone-8bcc1.appspot.com",
+        messagingSenderId: "1064299135030",
+        appId: "1:1064299135030:web:0d467606ce43bdd5d29897"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider(app);
+
+    
+       document.getElementById('sign_in_with_google').addEventListener("click", function(){
+ 
+
+           signInWithPopup(auth, provider)
+           .then((result) => {
+           // This gives you a Google Access Token. You can use it to access the Google API.
+              const credential = GoogleAuthProvider.credentialFromResult(result);
+                 const token = credential.accessToken;
+             // The signed-in user info.
+              const user = result.user;
+              console.log(user.email);
+              console.log("Logined!!!!!!!!!!!!!!!!!!!!!!");
+              localStorage.setItem("textvalue",user.email);
+              console.log(localStorage.getItem("textvalue"));
+              // localStorage.setItem("")
+           // ...
+       }).catch((error) => {
+           // Handle Errors here.
+               const errorCode = error.code;
+               const errorMessage = error.message;
+              // The email of the user's account used.
+               const email = error.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+
+    console.log(errorMessage);
+    // ...
+  });
+
+
+
+
+       })
+
+
+
+
+    </script>
+
+
+</body>
+</html>
