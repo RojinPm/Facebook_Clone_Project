@@ -55,7 +55,7 @@
      else if(Email_Login == localStorage.getItem("EmailAddress") && Password_Login == localStorage.getItem("Password") && user_name == localStorage.getItem("userName")){
 
             alert("Welcome to your account");
-            document.getElementById('Loging_link').href="index.html"
+            document.getElementById('Loging_link').href="Logined.html"
 
      }
 
@@ -70,6 +70,17 @@
  
 
  }
+
+  function Google_account(){
+
+    var user=localStorage.getItem("userName");
+
+    alert("Welcome " + user);
+
+    document.getElementById("link").href="Logined.html";
+
+    
+  }
 
 
 event.preventDefault();
