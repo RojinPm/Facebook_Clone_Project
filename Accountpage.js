@@ -136,6 +136,10 @@ document.getElementById("user_account_profile_name").innerHTML=localStorage.getI
 document.getElementById("Account_post_img").src=localStorage.getItem("image");
 document.getElementById("Account_post_name").textContent=localStorage.getItem("userName");
 document.getElementById("user_Account_write_img").src=localStorage.getItem("image")
+document.getElementById("user_account_profile_img").src=localStorage.getItem("image");
+
+document.getElementById("friends-num").innerHTML=Math.floor(Math.random() * 100) + 1;
+
 
 
 

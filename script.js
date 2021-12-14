@@ -111,14 +111,102 @@
                   
 
                 }
+                
+                
+              // document.getElementById("log_out").addEventListener('click', function(){
 
-             
-             
+
+              //   import { getAuth, signOut } from "firebase/auth";
+
+              //   const auth = getAuth();
+              //   signOut(auth).then(() => {
+                  
+              //     alert("Log out successfu")
+
+              //   }).catch((error) => {
+              //     // An error happened.
+              //   });
+                
+ 
 
 
+              // })
+
+
+//              function Signout_fn(){
+
+
+//               import { getAuth, signOut } from "firebase/auth";
+
+//            const auth = getAuth();
+//         signOut(auth).then(() => {
+   
+//            alert("Signed out succesfully")
+// }).catch((error) => {
+//   // An error happened.
+// });
+                 
+
+  $(document).ready(function(){
+ 
+     $("#change_color").click(function(){
+
+      $(".write_post_container").css('background', '#000');
+      $(".user_profile").css('background', '#000');
+      $("#navigation_bar").css('background', '#000');
+      $("#navigation_bar").css('color', '#000');
+      $("body").css('background', '#000');
+      $(".new_user_profile").css('background', '#000');
+      $(".new_user_profile").css('color', '#fff');
+      $(".left_sidebar").css('background', '#000');
+      $(".profile-pic").css('background', '#000');
+      $(".profile-pic").css('color', '#fff');
+      $(".right_sidebar").css('background', '#000');
+      $(".right_sidebar").css('color', '#fff');
+      $("#logined").css('color', '#fff');
+      $("#color_change").attr('src','display.png');
+      
+     })
+
+
+
+  })
 
         
 
+  $(document).ready(function(){
+
+     $("#color_change").dblclick(function(){
+
+    
+          
+        $(".write_post_container").css('background', '#fff');
+      $(".user_profile").css('background', '#fff');
+      $("#navigation_bar").css('background', '#fff');
+      $("#navigation_bar").css('color', '#000');
+      $("body").css('background', '#fff');
+      $(".new_user_profile").css('background', '#fff');
+      $(".new_user_profile").css('color', '#000');
+      $(".left_sidebar").css('background', '#fff');
+      $(".profile-pic").css('background', '#fff');
+      $(".profile-pic").css('color', '#000');
+      $(".right_sidebar").css('background', '#fff');
+      $(".right_sidebar").css('color', '#000');
+      $("#logined").css('color', '#000');
+      $("#color_change").attr('src','setting.png');
+     
+   
+      $("body").css('background', '#fff');
+
+
+     })
+
+
+  })
+   
+
     
 
     
+
+              
